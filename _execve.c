@@ -46,7 +46,7 @@ else /* else fork and execute executable command */
 pid = fork();
 if (pid == 0) /* if child process, execute */
 {
-if (execve(holder, s, NULL) == -)
+if (execve(holder, s, NULL) == -1)
 {
 not_found(s[0], num, env); /* special err msg */
 c_exit(s, env);
